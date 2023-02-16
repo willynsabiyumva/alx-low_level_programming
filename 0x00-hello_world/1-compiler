@@ -1,13 +1,2 @@
-#!/bin/sh
-
-CFILE="main.c"  # replace with the actual name of your C file
-
-if [ ! -f "$CFILE" ]; then
-  echo "Error: $CFILE does not exist."
-  exit 1
-fi
-
-OUTPUT_FILE="${CFILE%.c}.o"
-
-# Compile the C file but do not link it
-gcc -c "$CFILE" -o "$OUTPUT_FILE"
+#!/bin/bash
+gcc -c $CFILE
